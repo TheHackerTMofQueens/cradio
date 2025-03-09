@@ -59,10 +59,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W       &kp F               &kp P        &kp B            &kp J      &kp L       &kp U        &kp Y       &kp SQT
-&kp A  &ht LALT R  &ht LEFT_CONTROL S  &ht LGUI T   &kp G            &kp M      &ht RGUI N  &ht RCTRL E  &ht RALT I  &kp O
-&kp Z  &kp X       &kp C               &kp D        &kp V            &kp K      &kp H       &kp COMMA    &kp DOT     &kp QUESTION
-                                       &lt 3 ENTER  &kp BACKSPACE    &kp SPACE  &lt 2 TAB
+&kp Q  &kp W       &kp F               &kp P             &kp B            &kp J      &kp L              &kp U        &kp Y       &kp SQT
+&kp A  &ht LALT R  &ht LEFT_CONTROL S  &ht LEFT_SHIFT T  &kp G            &kp M      &ht RIGHT_SHIFT N  &ht RCTRL E  &ht RALT I  &kp O
+&kp Z  &kp X       &kp C               &kp D             &kp V            &kp K      &kp H              &kp COMMA    &kp DOT     &kp QUESTION
+                                       &lt 3 ENTER       &kp BACKSPACE    &kp SPACE  &lt 2 TAB
             >;
         };
 
@@ -77,19 +77,19 @@
 
         right_layer {
             bindings = <
-&kp N1   &kp N2    &kp N3     &kp N4   &kp N5     &kp N6    &kp N7     &kp N8     &kp N9     &kp N0
-&kp DEL  &kp CAPS  &kp PSCRN  &kp INS  &trans     &kp LEFT  &kp DOWN   &kp UP     &kp RIGHT  &trans
-&trans   &trans    &trans     &trans   &trans     &kp HOME  &kp PG_DN  &kp PG_UP  &kp END    &bootloader
-                              &trans   &kp ESC    &trans    &trans
+&trans  &kp END   &kp UP_ARROW  &kp HOME   &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans        &trans     &trans     &trans  &trans  &trans  &trans  &bootloader
+                                &kp TAB    &kp ESC    &trans  &trans
             >;
         };
 
         left_layer {
             bindings = <
-&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT          &kp CARET  &kp AMPS   &kp ASTRK  &kp GRAVE  &kp TILDE
-&kp DQT   &kp LBKT  &kp LBRC  &kp LPAR  &default_report    &kp FSLH   &kp MINUS  &kp EQUAL  &kp COLON  &kp SEMI
-&kp SQT   &kp RBKT  &kp RBRC  &kp RPAR  &bootloader        &kp BSLH   &kp UNDER  &kp PLUS   &kp PIPE   &kp QMARK
-                              &trans    &trans             &tog 0     &trans
+&kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT          &kp PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTERISK
+&kp DQT   &kp LBKT  &kp LBRC  &kp LPAR  &default_report    &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SLASH
+&kp SQT   &kp RBKT  &kp RBRC  &kp RPAR  &bootloader        &trans     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
+                              &trans    &trans             &kp ENTER  &kp KP_NUMBER_0
             >;
         };
 
