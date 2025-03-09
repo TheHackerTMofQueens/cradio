@@ -49,8 +49,17 @@
         compatible = "zmk,conditional-layers";
 
         tri_layer {
-            if-layers = <2 3>;
-            then-layer = <4>;
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        Shift-space {
+            bindings = <&kp LS(SPACE)>;
+            key-positions = <>;
         };
     };
 
@@ -59,43 +68,34 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W       &kp F               &kp P             &kp B            &kp J      &kp L  &kp U        &kp Y       &kp SQT
-&kp A  &ht LALT R  &ht LEFT_CONTROL S  &ht LEFT_SHIFT T  &kp G            &kp M      &kp N  &ht RCTRL E  &ht RALT I  &kp O
-&kp Z  &kp X       &kp C               &kp D             &kp V            &kp K      &kp H  &kp COMMA    &kp DOT     &kp QUESTION
-                                       &lt 3 ENTER       &kp BACKSPACE    &kp SPACE  &kp B
+&kp Q  &kp W       &kp F               &kp P             &kp B            &kp J      &kp L                 &kp U        &kp Y       &lt 3 SQT
+&kp A  &ht LALT R  &ht LEFT_CONTROL S  &ht LEFT_SHIFT T  &kp G            &kp M      &ht RIGHT_SHIFT N     &ht RCTRL E  &ht RALT I  &kp O
+&kp Z  &kp X       &kp C               &kp D             &kp V            &kp K      &kp H                 &kp COMMA    &kp DOT     &kp QUESTION
+                                       &lt 2 ENTER       &kp BACKSPACE    &kp SPACE  &lt 1 K_CONTEXT_MENU
             >;
         };
 
-        windows_layer {
+        navigation {
             bindings = <
-&kp Q  &kp W       &kp E       &kp R        &kp T         &kp Y      &kp U        &kp I       &kp O       &kp P
-&kp A  &ht LALT S  &ht LGUI D  &ht LCTRL F  &kp G         &kp H      &ht RCTRL J  &ht RGUI K  &ht RALT L  &kp BSPC
-&kp Z  &kp X       &kp C       &kp V        &kp B         &kp N      &kp M        &kp COMMA   &kp DOT     &kp ENTER
-                               &lt 3 TAB    &kp LSHIFT    &kp SPACE  &lt 2 TAB
+&none  &kp END   &kp UP_ARROW  &kp HOME   &none      &none  &none  &none  &none  &none
+&none  &kp LEFT  &kp DOWN      &kp RIGHT  &none      &none  &none  &none  &none  &none
+&none  &none     &none         &none      &none      &none  &none  &none  &none  &none
+                               &kp TAB    &kp ESC    &none  &none
             >;
         };
 
-        right_layer {
-            bindings = <
-&trans  &kp END   &kp UP_ARROW  &kp HOME   &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &kp LEFT  &kp DOWN      &kp RIGHT  &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans        &trans     &trans     &trans  &trans  &trans  &trans  &bootloader
-                                &kp TAB    &kp ESC    &trans  &trans
-            >;
-        };
-
-        left_layer {
+        numpad {
             bindings = <
 &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT          &kp PLUS   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTERISK
 &kp DQT   &kp LBKT  &kp LBRC  &kp LPAR  &default_report    &kp MINUS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp SLASH
-&kp SQT   &kp RBKT  &kp RBRC  &kp RPAR  &bootloader        &trans     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans
-                              &trans    &trans             &kp ENTER  &kp KP_NUMBER_0
+&kp SQT   &kp RBKT  &kp RBRC  &kp RPAR  &bootloader        &none      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none
+                              &none     &none              &kp ENTER  &kp KP_NUMBER_0
             >;
         };
 
-        tri_layer {
+        other_shit {
             bindings = <
-&kp F1  &kp F2   &kp F3   &kp F4   &bt BT_SEL 0    &bt BT_SEL 2  &out OUT_TOG   &tog 1          &kp C_MUTE    &kp C_PREV
+&kp F1  &kp F2   &kp F3   &kp F4   &bootloader     &bootloader   &out OUT_TOG   &none           &kp C_MUTE    &kp C_PREV
 &kp F5  &kp F6   &kp F7   &kp F8   &bt BT_SEL 1    &bt BT_SEL 3  &kp C_BRI_UP   &studio_unlock  &kp C_VOL_UP  &kp C_PP
 &kp F9  &kp F10  &kp F11  &kp F12  &bt BT_CLR      &bt BT_SEL 4  &kp C_BRI_DEC  &trans          &kp C_VOL_DN  &kp C_NEXT
                           &trans   &trans          &trans        &trans
