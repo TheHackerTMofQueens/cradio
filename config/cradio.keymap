@@ -77,7 +77,7 @@
 
         navigation {
             bindings = <
-&none  &kp END   &kp UP_ARROW  &kp HOME   &none      &none  &none  &none  &none  &none
+&none  &kp END   &kp UP_ARROW  &kp HOME   &none      &none  &none  &none  &none  &bootloader
 &none  &kp LEFT  &kp DOWN      &kp RIGHT  &none      &none  &none  &none  &none  &none
 &none  &none     &none         &none      &none      &none  &none  &none  &none  &none
                                &kp TAB    &kp ESC    &none  &none
